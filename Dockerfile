@@ -27,6 +27,8 @@ RUN apt-get update && apt-get install -y \
     libdbus-1-3 \
     libxcb-cursor0 \
     libegl1 \
+    libfontconfig1 \
+    libglib2.0-0 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
