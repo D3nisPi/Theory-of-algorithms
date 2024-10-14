@@ -18,13 +18,10 @@ python ./src/lab2/main.py
 ```
 docker build -t <image_name> .
 ```
-Запуск контейнера (для просмотра GUI необходима утилита [Xming](https://sourceforge.net/projects/xming/))
-```
-Xming.exe -ac
-```
+Запуск контейнера (для просмотра GUI необходим `Cygwin` [гайд по установке и наcтройке](https://github.com/NaPiZip/Docker-GUI-Apps-on-Windows))
 
 ```
-docker run -it --rm -e DISPLAY=<your_local_ip>:0.0 --name <container_name> <image_name>
+docker run -it --rm -e DISPLAY=<your_local_ip>:0 --name <container_name> <image_name>
 ```
 
 ## Краткая справка
