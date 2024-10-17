@@ -18,7 +18,7 @@ class MuseumTreeWidgetItem(QTreeWidgetItem):
         if e.button() == Qt.MouseButton.LeftButton:
             self.__museum_object.view()
             try:
-                client.update_user_views(window.museum.user.id, self.__museum_object.id, self.__museum_object.views)
+                client.inc_user_views(window.museum.user.id, self.__museum_object.id)
             except Exception as e:
                 msg_box = QMessageBox()
                 msg_box.setWindowTitle("Ошибка")

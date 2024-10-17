@@ -43,14 +43,13 @@ def get_collection_data(collection_id: int) -> List[VirtualMuseumObject]:
 
     return collection_items
 
-def update_user_views(user_id: int, item_id: int, views: int) -> None:
+def inc_user_views(user_id: int, item_id: int) -> None:
     params = {
-        'action': 'update_user_views'
+        'action': 'inc_user_views'
     }
     data = {
         'user_id': user_id,
-        'item_id': item_id,
-        'views': views
+        'item_id': item_id
     }
 
     response = requests.patch(server_uri, params=params, data=json.dumps(data))
